@@ -1,0 +1,42 @@
+﻿@model _24DG112073_Be2.Models.Category
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="bg-success">XOA DANH MUC</h2>
+
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+<div class="form-horizontal">
+    <hr />
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+        </div>
+    </div>
+    <h4>Ban thuc su muon xoa danh muc nay a?</h4>
+    <div class="form-group">
+        <div class="control-label col-md-2">Ten danh muc</div>
+        <div class="col-md-10">
+            @* Hien thi gia cua CategoryName *@
+            @Html.DisplayFor(model => model.CategoryName)
+
+
+
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Xoa" class="btn btn-primary" /> |
+                @Html.ActionLink("Quay lai danh sach", "Index", null, new { @class = "btn btn-primary " })
+            </div>
+        </div>
+    </div>
+</div>
+
+        }
+
+
