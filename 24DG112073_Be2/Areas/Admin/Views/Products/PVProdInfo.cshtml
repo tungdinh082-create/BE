@@ -1,0 +1,39 @@
+﻿@model _24DG112073_Be2.Models.Product
+
+<hr />
+<dl class="dl-horizontal">
+    <dt>
+        Tên sản phẩm
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.ProductName)
+    </dd>
+
+    <dt>
+        Mô tả
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.ProductDescription)
+    </dd>
+
+    <dt>
+        Đơn giá
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.ProductPrice)
+    </dd>
+
+    <dt>
+        Hình ảnh
+    </dt>
+    <dd>
+        <img src="@Model.ProductImage" alt="Hình ảnh sản phẩm" style="max-width: 200px;" />
+    </dd>
+
+    <dt>
+        Danh mục
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Category.CategoryName)
+    </dd>
+</dl>

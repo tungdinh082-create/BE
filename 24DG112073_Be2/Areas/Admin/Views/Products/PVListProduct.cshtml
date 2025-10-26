@@ -1,0 +1,54 @@
+﻿@model PagedList.IPagedList<_24DG112073_Be2.Models.Product>
+@using PagedList.Mvc;
+
+<style>
+    .pagination {
+        display: inline-block;
+        padding-left: 0;
+        margin: 20px 0;
+        border-radius: 4px;
+    }
+    /* (Bạn có thể thêm các style CSS khác cho phân trang ở đây nếu muốn) */
+</style>
+
+<div class="table-responsive">
+    <table class="table bg-info table-responsive">
+        <thead>
+            <tr>
+                <th class="bg-success col-md-2">Hình ảnh</th>
+                <th class="bg-success col-md-3">Tên sản phẩm</th>
+                <th class="bg-success col-md-1">Đơn giá</th>
+                <th class="bg-success col-md-2">Danh mục</th>
+                <th class="bg-success col-md-4"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <img src="@item.ProductImage" alt="Hình ảnh" style="max-width: 100px; max-height: 100px;" />
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProductName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProductPrice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Category.CategoryName)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Sửa", "Edit", new { id = item.ProductID }, new { @class = "btn btn-primary btn-sm" }) |
+                        @Html.ActionLink("Chi tiết", "Details", new { id = item.ProductID }, new { @class = "btn btn-info btn-sm" }) |
+                        @Html.ActionLink("Xóa", "Delete", new { id = item.ProductID }, new { @class = "btn btn-danger btn-sm" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page }))

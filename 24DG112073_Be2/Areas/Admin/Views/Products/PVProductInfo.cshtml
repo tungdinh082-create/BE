@@ -1,0 +1,35 @@
+﻿@model _24DG112073_Be2.Models.Product
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <style>
+        img {
+            height: 250px;
+            width: 250px;
+        }
+    </style>
+</head>
+
+
+<div class="container-fluid">
+    <div class="div-horizontal">
+        <div class="col-md-4">
+            <img src="   @Html.DisplayFor(model => model.ProductImage)" />
+        </div>
+        <div class="col-md-3">
+            <dl>
+                <dt>Ten san pham</dt>
+                <dd> @Html.DisplayFor(model => model.ProductName)</dd>
+                <dt> Mo ta</dt>
+                <dd> @Html.DisplayFor(model => model.ProductDescription)</dd>
+                <dt>Don gia</dt>
+                <dd> @Html.DisplayFor(model => model.ProductPrice)</dd>
+                <dt>Danh muc</dt>
+                <dd>@Html.DisplayFor(model => model.Category.CategoryName)</dd>
+            </dl>
+        </div>
+    </div>
+</div>

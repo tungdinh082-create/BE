@@ -1,22 +1,19 @@
-﻿
-@* se duoc truyen vao giua trang Partical va trang cha *@
+﻿@* se duoc truyen vao giua trang Partical va trang cha *@
 @model _24DG112073_Be2.Models.Category
 @* form con se duoc nhung vao form cha la Edit.cshtml va Create.cshtml *@
 
 
 <div class="form-group">
-    @*@Html.LabelFor(model => model.CategoryName, htmlAttributes: new { @class = "control-label col-md-2" })*@
-        <div class="control-label col-md-2">Ten danh muc</div>
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.CategoryName, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.CategoryName, "", new { @class = "text-danger" })
-        </div>
+    <div class="control-label col-md-2">Tên danh mục</div>
+    <div class="col-md-10">
+        @Html.DropDownList("CategoryID", null, htmlAttributes: new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.CategoryID, "", new { @class = "text-danger" })
     </div>
+</div>
 
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Luu" class="btn btn-primary" />
-            @Html.ActionLink("Quay lai danh sach", "Index", null, new { @class = "btn btn-primary btn-sm" })
-        </div>
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <input type="submit" value="Luu" class="btn btn-primary" />
+        @Html.ActionLink("Quay lai danh sach", "Index", null, new {  @class = "btn btn-primary btn-sm" })
     </div>
-
+</div>

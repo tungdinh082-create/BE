@@ -8,17 +8,17 @@
 <h2 class="bg-success">THEM DANH MUC</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
-<div class="form-horizontal">
-    
-    <hr />
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-    @* Nhung Partical View vao form cha *@
-    @Html.Partial("PVCreateEditCategory", Model)
-</div>
+
+    <div class="form-horizontal">
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @* Nhung Partical View vao form cha *@
+        @Html.Partial("PVCreateEditCategory", Model)
+    </div>
 }
 
 

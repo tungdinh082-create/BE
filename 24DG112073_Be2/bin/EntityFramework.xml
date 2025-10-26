@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <doc>
     <assembly>
         <name>EntityFramework</name>
@@ -2894,7 +2894,7 @@
             <param name="metadata"> The metadata workspace that the command tree should use. </param>
             <param name="dataSpace"> The logical 'space' that metadata in the expressions used in this command tree must belong to. </param>
             <param name="edmFunction">The <see cref="T:System.Data.Entity.Core.Metadata.Edm.EdmFunction" /> that represents the function that is being invoked.</param>
-            <param name="resultType">The expected result type for the functionâ€™s first result set.</param>
+            <param name="resultType">The expected result type for the function’s first result set.</param>
             <param name="parameters">The function's parameters.</param>
             <exception cref="T:System.ArgumentNullException">
             <paramref name="metadata" />, <paramref name="dataSpace" /> or <paramref name="edmFunction" /> is null
@@ -2913,8 +2913,8 @@
             </returns>
         </member>
         <member name="P:System.Data.Entity.Core.Common.CommandTrees.DbFunctionCommandTree.ResultType">
-            <summary>Gets the expected result type for the functionâ€™s first result set.</summary>
-            <returns>The expected result type for the functionâ€™s first result set.</returns>
+            <summary>Gets the expected result type for the function’s first result set.</summary>
+            <returns>The expected result type for the function’s first result set.</returns>
         </member>
         <member name="P:System.Data.Entity.Core.Common.CommandTrees.DbFunctionCommandTree.CommandTreeKind">
             <summary>Gets or sets the command tree kind.</summary>
@@ -6356,7 +6356,7 @@
             A collection of <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbExpression" />s that provide the key values. These expressions must match (in number, type, and order) the key properties of the referenced entity type.
             </param>
             <exception cref="T:System.ArgumentNullException">entitySet is null, or keyValues is null or contains null.</exception>
-            <exception cref="T:System.ArgumentException">The count of keyValues does not match the count of key members declared by the entitySetâ€™s element type, or keyValues contains an expression with a result type that is not compatible with the type of the corresponding key member.</exception>
+            <exception cref="T:System.ArgumentException">The count of keyValues does not match the count of key members declared by the entitySet’s element type, or keyValues contains an expression with a result type that is not compatible with the type of the corresponding key member.</exception>
         </member>
         <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.CreateRef(System.Data.Entity.Core.Metadata.Edm.EntitySet,System.Data.Entity.Core.Common.CommandTrees.DbExpression[])">
             <summary>
@@ -6368,7 +6368,7 @@
             A collection of <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbExpression" />s that provide the key values. These expressions must match (in number, type, and order) the key properties of the referenced entity type.
             </param>
             <exception cref="T:System.ArgumentNullException">entitySet is null, or keyValues is null or contains null.</exception>
-            <exception cref="T:System.ArgumentException">The count of keyValues does not match the count of key members declared by the entitySetâ€™s element type, or keyValues contains an expression with a result type that is not compatible with the type of the corresponding key member.</exception>
+            <exception cref="T:System.ArgumentException">The count of keyValues does not match the count of key members declared by the entitySet’s element type, or keyValues contains an expression with a result type that is not compatible with the type of the corresponding key member.</exception>
         </member>
         <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.CreateRef(System.Data.Entity.Core.Metadata.Edm.EntitySet,System.Data.Entity.Core.Metadata.Edm.EntityType,System.Collections.Generic.IEnumerable{System.Data.Entity.Core.Common.CommandTrees.DbExpression})">
             <summary>
@@ -6382,7 +6382,7 @@
             </param>
             <exception cref="T:System.ArgumentNullException">entitySet or entityType is null, or keyValues is null or contains null.</exception>
             <exception cref="T:System.ArgumentException">entityType is not from the same type hierarchy (a subtype, supertype, or the same type) as entitySet's element type.</exception>
-            <exception cref="T:System.ArgumentException">The count of keyValues does not match the count of key members declared by the entitySetâ€™s element type, or keyValues contains an expression with a result type that is not compatible with the type of the corresponding key member.</exception>
+            <exception cref="T:System.ArgumentException">The count of keyValues does not match the count of key members declared by the entitySet’s element type, or keyValues contains an expression with a result type that is not compatible with the type of the corresponding key member.</exception>
         </member>
         <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.CreateRef(System.Data.Entity.Core.Metadata.Edm.EntitySet,System.Data.Entity.Core.Metadata.Edm.EntityType,System.Data.Entity.Core.Common.CommandTrees.DbExpression[])">
             <summary>
@@ -6396,7 +6396,7 @@
             </param>
             <exception cref="T:System.ArgumentNullException">entitySet or entityType is null, or keyValues is null or contains null.</exception>
             <exception cref="T:System.ArgumentException">entityType is not from the same type hierarchy (a subtype, supertype, or the same type) as entitySet's element type.</exception>
-            <exception cref="T:System.ArgumentException">The count of keyValues does not match the count of key members declared by the entitySetâ€™s element type, or keyValues contains an expression with a result type that is not compatible with the type of the corresponding key member.</exception>
+            <exception cref="T:System.ArgumentException">The count of keyValues does not match the count of key members declared by the entitySet’s element type, or keyValues contains an expression with a result type that is not compatible with the type of the corresponding key member.</exception>
         </member>
         <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.RefFromKey(System.Data.Entity.Core.Metadata.Edm.EntitySet,System.Data.Entity.Core.Common.CommandTrees.DbExpression)">
             <summary>
@@ -9992,7 +9992,7 @@
             An attempt was made to set the <see cref="P:System.Data.Entity.Core.EntityClient.EntityConnection.ConnectionString" /> property after the
             <see
                 cref="T:System.Data.Entity.Core.EntityClient.EntityConnection" />
-            â€™s <see cref="T:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace" /> was initialized. The
+            ’s <see cref="T:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace" /> was initialized. The
             <see
                 cref="T:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace" />
             is initialized either when the <see cref="T:System.Data.Entity.Core.EntityClient.EntityConnection" /> instance is constructed through the overload that takes a
@@ -10213,7 +10213,7 @@
         </member>
         <member name="P:System.Data.Entity.Core.EntityClient.EntityConnectionStringBuilder.Provider">
             <summary>Gets or sets the name of the underlying .NET Framework data provider in the connection string.</summary>
-            <returns>The invariant name of the underlying .NET FrameworkÂ data provider.</returns>
+            <returns>The invariant name of the underlying .NET Framework data provider.</returns>
         </member>
         <member name="P:System.Data.Entity.Core.EntityClient.EntityConnectionStringBuilder.Metadata">
             <summary>Gets or sets the metadata locations in the connection string.</summary>
@@ -23206,7 +23206,7 @@
         </member>
         <member name="M:System.Data.Entity.Core.Objects.ObjectStateEntry.GetModifiedProperties">
             <summary>
-            Returns the names of an objectâ€™s properties that have changed since the last time
+            Returns the names of an object’s properties that have changed since the last time
             <see
                 cref="M:System.Data.Entity.Core.Objects.ObjectContext.SaveChanges" />
             was called.
@@ -23261,11 +23261,11 @@
         </member>
         <member name="M:System.Data.Entity.Core.Objects.ObjectStateEntry.ApplyCurrentValues(System.Object)">
             <summary>Sets the current values of the entry to match the property values of a supplied object.</summary>
-            <param name="currentEntity">The detached object that has updated values to apply to the object.  currentEntity  can also be the objectâ€™s entity key.</param>
+            <param name="currentEntity">The detached object that has updated values to apply to the object.  currentEntity  can also be the object’s entity key.</param>
         </member>
         <member name="M:System.Data.Entity.Core.Objects.ObjectStateEntry.ApplyOriginalValues(System.Object)">
             <summary>Sets the original values of the entry to match the property values of a supplied object.</summary>
-            <param name="originalEntity">The detached object that has original values to apply to the object.  originalEntity  can also be the objectâ€™s entity key.</param>
+            <param name="originalEntity">The detached object that has original values to apply to the object.  originalEntity  can also be the object’s entity key.</param>
         </member>
         <member name="M:System.Data.Entity.Core.Objects.ObjectStateEntry.System#Data#Entity#Core#Objects#DataClasses#IEntityChangeTracker#EntityMemberChanging(System.String)">
             <summary>
@@ -54138,4 +54138,3 @@
         </member>
     </members>
 </doc>
-
